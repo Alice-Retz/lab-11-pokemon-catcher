@@ -1,5 +1,6 @@
 import pokes from './data/pokemon.js';
-import { findById } from './storage-utils.js';
+// import { findById, getPoke } from './storage-utils.js';
+
 
 const poke1Radio = document.getElementById('poke1-radio');
 const poke1Image = document.getElementById('poke1-image');
@@ -9,7 +10,7 @@ const poke3Radio = document.getElementById('poke3-radio');
 const poke3Image = document.getElementById('poke3-image');
 const pickButton = document.getElementById('submit');
 
-
+let totalPlays = 0;
 function renderRandomPoke(){
     totalPlays++;
     let randNum1 = Math.ceil(Math.random()) * pokes.length;
