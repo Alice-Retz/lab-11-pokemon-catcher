@@ -1,7 +1,7 @@
 // <!-- findById with while loop, showPokeId that retrieves data from local function, randomNum generator in app.js -->
 // import pokemon from "./data/pokemon";
 
-export function findById(items, id){
+export function getPokedex(items, id){
     for (let item of items){
         if (item.id === id) {
             return item;
@@ -11,13 +11,13 @@ export function findById(items, id){
 
 
 
-export function getPoke(id){
+export function setPokedex(id){
 
     let resultString = localStorage.getItem('RESULTS') || '[]';
     const results = JSON.parse(resultString);
    
 
-    const poke = findById(results, id);
+    const poke = getPokedex(results, id);
     if (!poke){
         const newItem = {
             id: id,
