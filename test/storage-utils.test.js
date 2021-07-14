@@ -1,7 +1,5 @@
-import { setPokedex, getPokedex } from '../storage-utils.js';
-// import { encounterPokemon } from '../app.js';
+import { setPokedex, getPokedex, findById } from '../storage-utils.js';
 import pokemon from '../data/pokemon.js';
-import { } from '../app.js';
 
 const test = QUnit.test;
 
@@ -22,7 +20,7 @@ test('setPokedex should create results object if pokemon not previously shown', 
 });
 
 test('setPokedex should increment object', (expect) => {
-    localStorage.removeItem('RESULTS');
+
     const fakeResult = [{
         id: 1,
         shown: 1,
@@ -43,7 +41,7 @@ test('setPokedex should increment object', (expect) => {
     expect.deepEqual(results[0], expected);
 });
 
-test('getPokedex should ', expect => {
+test('findById should return correct information', expect => {
     const expected = {
         '_id':'5cef3501ef6005a77cd4fd17',
         'pokemon':'bulbasaur',
@@ -77,10 +75,17 @@ test('getPokedex should ', expect => {
         'pokebase':'bulbasaur',
         'pokedex':'http://www.pokemon.com/us/pokedex/bulbasaur'
     };
-    const actual = getPokedex(pokemon, 1);
+    const actual = findById(pokemon, 1);
     expect.deepEqual(actual, expected);
 });
 
-test ('', expect => {
-    
+test ('dose getPokedex retrieve pokemon data', expect => {
+    const expected = [{
+        id: 0,
+        shown: 1,
+        preferred: 0
+    }];
+    setPokedex(0);
+    const actual = getPokedex();
+    expect.deepEqual(actual, expected); 
 });
