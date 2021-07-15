@@ -1,5 +1,5 @@
-import { setPokedex, getPokedex, findById } from '../storage-utils.js';
-import pokemon from '../data/pokemon.js';
+import { setPokedex } from '../storage-utils.js';
+// import pokemon from '../data/pokemon.js';
 
 const test = QUnit.test;
 
