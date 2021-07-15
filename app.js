@@ -76,7 +76,7 @@ capturePokemon.addEventListener('click', () => {
     if (totalPlays < 10) {
         encounterPokemon();
     } else {
-        window.location.replace('./results.html');
+        window.location.replace('./results/index.html');
     }
     
 });

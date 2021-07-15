@@ -39,35 +39,35 @@ for (let item of results) {
 //Let's make a chart!
 
 //This calls the canvas tag we placed on the other page
-var ctx = document.getElementById('caught-chart').getContext('2d');
+// var ctx = document.getElementById('caught-chart').getContext('2d');
 
 //this builds the actual chart
-new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: names,
-        datasets: [{
-            label: '# of Times Shown',
-            data: shown,
-            backgroundColor: [
-                '#51e5ffff'
-            ],
-            borderWidth: 1
-        },
-        {
-            label: '# of Times Preferred',
-            data: preferred,
-            backgroundColor: [
-                '#440381ff'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-});
+// new Chart(ctx, {
+//     type: 'bar',
+//     data: {
+//         labels: names,
+//         datasets: [{
+//             label: '# of Times Shown',
+//             data: shown,
+//             backgroundColor: [
+//                 '#51e5ffff'
+//             ],
+//             borderWidth: 1
+//         },
+//         {
+//             label: '# of Times Preferred',
+//             data: preferred,
+//             backgroundColor: [
+//                 '#440381ff'
+//             ],
+//             borderWidth: 1
+//         }]
+//     },
+//     options: {
+//         scales: {
+//             y: {
+//                 beginAtZero: true
+//             }
+//         }
+//     }
+// });

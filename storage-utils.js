@@ -16,6 +16,10 @@ export function setPokedex(results){
     localStorage.setItem('RESULTS', JSON.stringify(results));
 }
 
+
+
+
+
 export function getPokedex(){
     let resultString = localStorage.getItem('RESULTS') || '[]';
     const results = JSON.parse(resultString);
