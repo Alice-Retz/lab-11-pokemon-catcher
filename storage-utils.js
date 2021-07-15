@@ -11,9 +11,19 @@ export function findById(items, id){
 
 
 
-export function setPokedex(id){
+export function setPokedex(results){
+    
+    localStorage.setItem('RESULTS', JSON.stringify(results));
+}
 
+export function getPokedex(){
+    let resultString = localStorage.getItem('RESULTS') || '[]';
+    const results = JSON.parse(resultString);
+    return results;
+}
+export function incrementShown(id){
     const results = getPokedex();
+    console.log(results);
     const poke = findById(results, id);
     if (!poke){
         const newItem = {
@@ -24,12 +34,6 @@ export function setPokedex(id){
         results.push(newItem);
     } else {
         poke.shown++;
-    }
-    localStorage.setItem('RESULTS', JSON.stringify(results));
-}
-
-export function getPokedex(){
-    let resultString = localStorage.getItem('RESULTS') || '[]';
-    const results = JSON.parse(resultString);
-    return results;
+    } 
+    setPokedex(results);
 }
