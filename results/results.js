@@ -1,4 +1,4 @@
-import { getPokedex, findById } from '../storage-utils.js;';
+import { getPokedex, findById } from '../storage-utils.js';
 import pokemon from '../data/pokemon.js';
 
 const resultsList = document.getElementById('results-list');
@@ -36,12 +36,43 @@ for (let item of results) {
     resultsList.appendChild(resultDiv);
 }
 
-//Let's make a chart!
+// Let's munge some mons!
+export function mungeShown(pokemonArray) {
+    let shownResults = [];
+    for (let pokemon of pokemonArray) {
+        console.log(pokemon.shown);
+        shownResults.push(pokemon.shown);
+    }
+    return shownResults;
+}
 
-//This calls the canvas tag we placed on the other page
+export function mungeName(pokemonArray) {
+    let nameResults = [];
+    for (let pokemon of pokemonArray) {
+        nameResults.push(pokemon.name);
+    }
+    return nameResults;
+}
+
+export function mungePreferred(pokemonArray) {
+    let preferredResults = [];
+    for (let pokemon of pokemonArray) {
+        preferredResults.push(pokemon.preferred);
+    }
+    return preferredResults;
+}
+
+
+
+
+
+
+// //Let's make a chart!
+
+// //This calls the canvas tag we placed on the other page
 // var ctx = document.getElementById('caught-chart').getContext('2d');
 
-//this builds the actual chart
+// //this builds the actual chart
 // new Chart(ctx, {
 //     type: 'bar',
 //     data: {
