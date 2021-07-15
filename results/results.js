@@ -1,4 +1,4 @@
-import { getPokedex, findById } from '../storage-utils.js;';
+import { getPokedex, findById } from '../storage-utils.js';
 import pokemon from '../data/pokemon.js';
 
 const resultsList = document.getElementById('results-list');
@@ -37,15 +37,16 @@ for (let item of results) {
 }
 
 // Let's munge some mons!
-function mungeShown(pokemonArray) {
+export function mungeShown(pokemonArray) {
     let shownResults = [];
     for (let pokemon of pokemonArray) {
+        console.log(pokemon.shown);
         shownResults.push(pokemon.shown);
     }
     return shownResults;
 }
 
-function mungeName(pokemonArray) {
+export function mungeName(pokemonArray) {
     let nameResults = [];
     for (let pokemon of pokemonArray) {
         nameResults.push(pokemon.name);
@@ -53,7 +54,7 @@ function mungeName(pokemonArray) {
     return nameResults;
 }
 
-function mungePreferred(pokemonArray) {
+export function mungePreferred(pokemonArray) {
     let preferredResults = [];
     for (let pokemon of pokemonArray) {
         preferredResults.push(pokemon.preferred);
@@ -66,38 +67,38 @@ function mungePreferred(pokemonArray) {
 
 
 
-//Let's make a chart!
+// //Let's make a chart!
 
-//This calls the canvas tag we placed on the other page
-var ctx = document.getElementById('caught-chart').getContext('2d');
+// //This calls the canvas tag we placed on the other page
+// var ctx = document.getElementById('caught-chart').getContext('2d');
 
-//this builds the actual chart
-new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: names,
-        datasets: [{
-            label: '# of Times Shown',
-            data: shown,
-            backgroundColor: [
-                '#51e5ffff'
-            ],
-            borderWidth: 1
-        },
-        {
-            label: '# of Times Preferred',
-            data: preferred,
-            backgroundColor: [
-                '#440381ff'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-});
+// //this builds the actual chart
+// new Chart(ctx, {
+//     type: 'bar',
+//     data: {
+//         labels: names,
+//         datasets: [{
+//             label: '# of Times Shown',
+//             data: shown,
+//             backgroundColor: [
+//                 '#51e5ffff'
+//             ],
+//             borderWidth: 1
+//         },
+//         {
+//             label: '# of Times Preferred',
+//             data: preferred,
+//             backgroundColor: [
+//                 '#440381ff'
+//             ],
+//             borderWidth: 1
+//         }]
+//     },
+//     options: {
+//         scales: {
+//             y: {
+//                 beginAtZero: true
+//             }
+//         }
+//     }
+// });
