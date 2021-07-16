@@ -34,8 +34,8 @@ function encounterPokemon(){
         poke2 = getRandomNumber();
         poke3 = getRandomNumber();
     }    
+    console.log(poke1Radio);
     poke1Radio.value = poke1.id;
-    //console.log(poke1Radio.value);
     poke1Radio.checked = false;
     poke1Image.src = poke1.url_image;
     console.log(poke1);
