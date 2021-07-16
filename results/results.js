@@ -16,7 +16,7 @@ for (let item of results) {
 
     //displaying the images
     const pokeImage = document.createElement('img');
-    pokeImage.src = `../assets/${pokemon.image}`;
+    pokeImage.src = pokemonData.url_image;
 
     //creating <p> tags to display the info
     const shownP = document.createElement('p');
@@ -35,6 +35,8 @@ for (let item of results) {
 
     resultsList.appendChild(resultDiv);
 }
+
+
 
 // Let's munge some mons!
 export function mungeShown(pokemonArray) {
@@ -68,37 +70,42 @@ export function mungePreferred(pokemonArray) {
 
 
 // //Let's make a chart!
+const retrievePokedex = getPokedex();
+const namesChart = mungeName(retrievePokedex);
+const shownChart = mungeShown(retrievePokedex); 
+const preferredChart = mungePreferred(retrievePokedex);
 
-// //This calls the canvas tag we placed on the other page
-// var ctx = document.getElementById('caught-chart').getContext('2d');
+//This calls the canvas tag we placed on the other page
+var ctx = document.getElementById('caught-chart').getContext('2d');
 
-// //this builds the actual chart
-// new Chart(ctx, {
-//     type: 'bar',
-//     data: {
-//         labels: names,
-//         datasets: [{
-//             label: '# of Times Shown',
-//             data: shown,
-//             backgroundColor: [
-//                 '#51e5ffff'
-//             ],
-//             borderWidth: 1
-//         },
-//         {
-//             label: '# of Times Preferred',
-//             data: preferred,
-//             backgroundColor: [
-//                 '#440381ff'
-//             ],
-//             borderWidth: 1
-//         }]
-//     },
-//     options: {
-//         scales: {
-//             y: {
-//                 beginAtZero: true
-//             }
-//         }
-//     }
-// });
+//this builds the actual chart
+new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: namesChart,
+        datasets: [{
+            label: '# of Times Shown',
+            data: shownChart,
+            backgroundColor: [
+                '#7F9F91'
+            ],
+            borderWidth: 1
+        },
+        {
+            label: '# of Times Preferred',
+            data: preferredChart,
+            backgroundColor: [
+                '#698996'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        responsive: false,
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
