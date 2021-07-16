@@ -1,0 +1,64 @@
+body {
+    text-align: center;
+    font-family: 'Tourney', cursive;
+    color:blue;
+}
+
+h1 {
+    font-size: 80px;
+    padding: none;
+    font-family: 'Tourney', cursive;
+    background-color: gold;
+    padding: 25px;
+    margin: 25px;
+    text-shadow: 5px 5px 5px rgba(3, 3, 252, 0.527);
+}
+
+.result{
+    width: 200px;
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 400;
+    border: solid blue 1px; 
+    margin: 15px;
+    box-shadow: 5px 5px 5px rgb(192, 192, 236);
+    
+}
+
+.result:hover {
+    width: 210px;
+    background: whitesmoke;
+    color: #E09190;
+    font-size: 28px;
+    font-weight: bolder;
+    border: 5px solid #E09190;
+    box-shadow: 5px 5px 5px darkgrey;
+}
+
+#stats {
+    font-size: 80px;
+    padding: none;
+    font-family: 'Tourney', cursive;
+    background-color: gold;
+    font-weight: bold;
+    padding: 25px;
+    margin: 25px;
+    text-shadow: 5px 5px 5px rgba(3, 3, 252, 0.527);
+
+}
+
+#bless-this-mess.preferred {
+    margin: 10px;
+    text-align: center;
+}
+
+#caught-chart {
+    background-color: white;
+    margin: 50px;
+    border: solid 3px #E09190;
+    box-shadow: 5px 5px 5px rgb(139, 139, 151)
+    
+   }
+
