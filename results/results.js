@@ -10,10 +10,13 @@ let preferred = [];
 
 for (let item of results) {
     const pokemonData = findById(pokemon, item.id);
-    names.push(pokemonData.name);
+    names.push(pokemonData.pokemon);
     shown.push(item.shown);
     preferred.push(item.preferred);
 
+    //display the names
+    const pokeName = document.createElement('h4');
+    pokeName.textContent = `${pokemonData.pokemon}`;
     //displaying the images
     const pokeImage = document.createElement('img');
     pokeImage.src = pokemonData.url_image;
@@ -87,7 +90,7 @@ new Chart(ctx, {
             label: '# of Times Shown',
             data: shownChart,
             backgroundColor: [
-                '#7F9F91'
+                '#ffd700'
             ],
             borderWidth: 1
         },
@@ -95,7 +98,7 @@ new Chart(ctx, {
             label: '# of Times Preferred',
             data: preferredChart,
             backgroundColor: [
-                '#698996'
+                '#0000ff'
             ],
             borderWidth: 1
         }]
@@ -109,3 +112,5 @@ new Chart(ctx, {
         }
     }
 });
+
+
