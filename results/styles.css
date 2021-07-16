@@ -1,51 +1,79 @@
 body {
     text-align: center;
-    font-family: 'Tourney', cursive;
-    color:blue;
+    font-family: 'Press Start 2P', cursive;
+    color:gold;
 }
 
 h1 {
     font-size: 80px;
     padding: none;
-    font-family: 'Tourney', cursive;
-    background-color: gold;
+    font-family: 'Press Start 2P', cursive;
+    background-color: blue;
+    border-radius: 20px;
+    border: gold solid 10px;
     padding: 25px;
     margin: 25px;
-    text-shadow: 5px 5px 5px rgba(3, 3, 252, 0.527);
+    text-shadow: 5px 5px 5px rgba(2, 2, 41, 0.527);
+    box-shadow: 5px 5px 5px rgba(2, 2, 41, 0.527), 5px 10px 8px rgba(2, 2, 41, 0.527) inset;
 }
+
+#log img {
+    width: 400px;
+
+}
+
+
 
 .result{
     width: 200px;
+    height: 280px;
+    background-image: url('../assets/colorless_card.png');
+    background-repeat: no-repeat;
+    background-size: 200px;
     display: inline-flex;
     flex-direction: column;
     text-align: center;
-    font-size: 25px;
+    font-size: 15px;
     font-weight: 400;
-    border: solid blue 1px; 
+    color: black;
+    border: solid gold 1px; 
+    border-radius: 10px;
     margin: 15px;
     box-shadow: 5px 5px 5px rgb(192, 192, 236);
     
 }
 
+.result img {
+    width:100px;
+    margin-top: 30px;
+    margin-left: 25%;
+    margin-bottom: 20px;
+}
+
 .result:hover {
     width: 210px;
-    background: whitesmoke;
-    color: #E09190;
-    font-size: 28px;
+    height: 290px;
+    background-image: url('../assets/colorless_card.png');
+    background-repeat: no-repeat;
+    background-size: 210px;
+    color: blue;
+    font-size: 16px;
     font-weight: bolder;
-    border: 5px solid #E09190;
+    border: 5px solid blue;
     box-shadow: 5px 5px 5px darkgrey;
 }
 
 #stats {
     font-size: 80px;
     padding: none;
-    font-family: 'Tourney', cursive;
-    background-color: gold;
-    font-weight: bold;
+    font-family: 'Press Start 2P', cursive;
+    background-color: blue;
+    border-radius: 20px;
+    border: gold solid 10px;
     padding: 25px;
     margin: 25px;
-    text-shadow: 5px 5px 5px rgba(3, 3, 252, 0.527);
+    text-shadow: 5px 5px 5px rgba(2, 2, 41, 0.527);
+    box-shadow: 5px 5px 5px rgba(2, 2, 41, 0.527), 5px 10px 8px rgba(2, 2, 41, 0.527) inset;
 
 }
 
@@ -57,7 +85,8 @@ h1 {
 #caught-chart {
     background-color: white;
     margin: 50px;
-    border: solid 3px #E09190;
+    border: solid 3px blue;
+    border-radius: 10px;
     box-shadow: 5px 5px 5px rgb(139, 139, 151)
     
    }
